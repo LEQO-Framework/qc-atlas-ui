@@ -19,5 +19,5 @@ jobs:
       - name: Install Node.js dependencies
         run: npm install
 
-      - name: Run linters (ignore all errors and warnings)
-        run: npm run lint || true
+      - name: Run linters and auto-fix simple issues
+        run: npm run lint -- --fix || true

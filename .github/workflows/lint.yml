@@ -19,5 +19,8 @@ jobs:
       - name: Install Node.js dependencies
         run: npm install
 
+      - name: Run Prettier and auto-fix formatting
+        run: npx prettier --write "src/**/*.ts"
+
       - name: Run linters 
         run: npm run lint 
